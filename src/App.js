@@ -5,17 +5,36 @@ class App extends Component {
     super(props);
     this.state = {
       counter: 0,
+      hasError: false,
     };
   }
+
+  incrementCounter = () => {
+    this.state.hasError
+      ? this.setState({ counter: this.state.counter + 1, hasError: false })
+      : this.setState({ counter: this.state.counter + 1 });
+  };
+
+  decrementCounter = () => {
+    this.state.counter !== 0
+      ? this.setState({
+          counter: this.state.counter - 1,
+        })
+      : this.setState({ hasError: true });
+  };
+
   render() {
     return (
       <div data-test="component-app">
         <h1 data-test="display-counter">Counter: {this.state.counter}</h1>
-        <button
-          onClick={() => this.setState({ counter: this.state.counter + 1 })}
-          data-test="increment-button"
-        >
+        {this.state.hasError && (
+          <h3 data-test="error">Counter cannot be negative</h3>
+        )}
+        <button onClick={this.incrementCounter} data-test="increment-button">
           Increment
+        </button>
+        <button onClick={this.decrementCounter} data-test="decrement-button">
+          Decrement
         </button>
       </div>
     );
