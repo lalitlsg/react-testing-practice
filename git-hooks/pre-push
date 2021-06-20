@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if npm run test:cover 
+then 
+    echo "SUCCESS: Pushed Successfully!"
+    exit 0
+else 
+    echo "ERROR: Code coverage not fulfill"
+    exit 1
+fi 

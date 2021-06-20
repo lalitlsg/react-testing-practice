@@ -42,7 +42,7 @@ class App extends Component {
           Decrement
         </button>
         <hr />
-        {/* <p>Some paragraph...Git Hooks</p>
+        {/* <p>Some paragraph...Git Hooks </p>
 
         <input value={this.state.input} onChange={this.handleInputChange}/>
         <p>{this.state.input}</p> */}
