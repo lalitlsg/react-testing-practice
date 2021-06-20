@@ -42,7 +42,6 @@
   "devDependencies": {
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
-    "husky": "^6.0.0",
     "jest-enzyme": "^7.1.2"
   },
   "jest": {
@@ -63,10 +62,5 @@
       "text",
       "lcov"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test:cover"
-    }
   }
 }
