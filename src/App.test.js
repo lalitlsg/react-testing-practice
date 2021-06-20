@@ -103,5 +103,5 @@ test("hide error when counter > 0", () => {
 
   // check if error appears
   const error = findByTestAttr(wrapper, "error");
-  expect(error.length).toBe(0);
+  expect(error.length).toBe(1);
 });
