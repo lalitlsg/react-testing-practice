@@ -6,6 +6,7 @@ class App extends Component {
     this.state = {
       counter: 0,
       hasError: false,
+      input:""
     };
   }
 
@@ -23,6 +24,10 @@ class App extends Component {
       : this.setState({ hasError: true });
   };
 
+  handleInputChange = ({target}) => {
+    this.setState({input: target.value});
+  }
+
   render() {
     return (
       <div data-test="component-app">
@@ -36,6 +41,10 @@ class App extends Component {
         <button onClick={this.decrementCounter} data-test="decrement-button">
           Decrement
         </button>
+        <hr />
+        <p>Some paragraph...</p>
+        <input value={this.state.input} onChange={this.handleInputChange}/>
+        <p>{this.state.input}</p>
       </div>
     );
   }
