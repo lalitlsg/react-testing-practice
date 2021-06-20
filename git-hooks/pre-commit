@@ -1,3 +1,8 @@
 #!/bin/sh
 
-npm run test:cover
+if [ npm run test:cover ] 
+then
+    echo "SUCCESS : Committed Successfully!"
+else 
+    echo "ERROR : Code coverage not fulfill."
+fi 
