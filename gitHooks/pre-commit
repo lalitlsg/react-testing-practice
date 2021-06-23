@@ -4,7 +4,7 @@ GREEN='\033[1;32m'
 
 if npm run test:cover
 then
-    echo "${GREEN}SUCCESS : Committed Successfully!"
+    echo "${GREEN}SUCCESS : Code coverage fulfill."
     exit 0;
 else 
     echo "${RED}ERROR : Code coverage not fulfill."

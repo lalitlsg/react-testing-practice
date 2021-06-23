@@ -24,9 +24,9 @@ class App extends Component {
       : this.setState({ hasError: true });
   };
 
-  // handleInputChange = ({target}) => {
-  //   this.setState({input: target.value});
-  // }
+  handleInputChange = ({target}) => {
+    this.setState({input: target.value});
+  }
 
   render() {
     return (
@@ -42,10 +42,10 @@ class App extends Component {
           Decrement
         </button>
         <hr />
-        {/* <p>Some paragraph...Git Hooks </p>
+        <p>Some paragraph...Git Hooks </p>
 
         <input value={this.state.input} onChange={this.handleInputChange}/>
-        <p>{this.state.input}</p> */}
+        <p>{this.state.input}</p>
       </div>
     );
   }
