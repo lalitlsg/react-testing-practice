@@ -6,7 +6,8 @@ class App extends Component {
     this.state = {
       counter: 0,
       hasError: false,
-      input:""
+      input:"",
+      arr: ['a','b','c']
     };
   }
 
@@ -23,6 +24,15 @@ class App extends Component {
         })
       : this.setState({ hasError: true });
   };
+
+  makeCapital = (name) => {
+    console.log(this.capitalize(name));
+  }
+
+  capitalize = (name) => {
+    let capName = name.toUpperCase();
+    return capName;
+  }
 
   // handleInputChange = ({target}) => {
   //   this.setState({input: target.value});
@@ -42,7 +52,12 @@ class App extends Component {
           Decrement
         </button>
         <hr />
-        {/* <p>Some paragraph...Git Hooks </p>
+        <button onClick={()=>this.makeCapital('lalit')}>Click here to capitalize</button>
+        <hr />
+        {/* <ul>
+        {this.state.arr.map((v)=><li>{v}</li>)}
+        </ul>
+        <p>Some paragraph...Git Hooks </p>
 
         <input value={this.state.input} onChange={this.handleInputChange}/>
         <p>{this.state.input}</p> */}

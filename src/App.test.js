@@ -105,3 +105,8 @@ test("hide error when counter > 0", () => {
   const error = findByTestAttr(wrapper, "error");
   expect(error.length).toBe(0);
 });
+
+test('should return name in capitals when `capitalize` called', () => {
+  const wrapper = setup();
+  expect(wrapper.instance().capitalize('lalit')).toBe('LALIT');
+});
